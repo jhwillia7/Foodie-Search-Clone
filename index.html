@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <link href="https://bootswatch.com/4/superhero/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?source=false&key=AIzaSyB1K6lWv0Dxjagb-b1DMZaiTUIEqYf1iqA&libraries=geometry,places,drawing,visualization"></script>
+    <script src="assets/javascript/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <title>Looking to Grub? Let us Hyelp!</title>
+</head>
+
+<body>
+    <!--Input area of the page-->
+    <div class="container">
+        <!--SignIn and SignOut Buttons-->
+        <div class="container">
+            <div id="welcome-sign">
+                <ul class="nav justify-content-begining">
+                    <li class="nav-item nav-one">
+                        <a class="btn btn-lg btn-danger sign-in">Sign-In</a>
+                    </li>
+                    <li class="nav-item nav-two">
+                        <a class="btn btn-lg btn-danger sign-up">Sign-Up</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="headerContainer">
+                <div class="sign-up-box"></div>
+                <div class="col-lg-12 jumbotron" style="overflow:auto">
+                    <h1>
+                        <span class="glyphicon glyphicon-foodie"></span> HYelp
+                        <span class="glyphicon glyphicon-foodie"></span>
+                    </h1>
+                    <p>The Better Yelp Alternative</p>
+                </div>
+            </div>
+
+            <!--Zomato Search Bar-->
+            <div class="row form-group">
+                <select id="inputCategory" class="col-lg-4 form-control">
+                    <option value='' selected>What are you craving?</option>
+                    <input id="inputLocation" class="col-lg-7 form-control input-location" type="text" placeholder="Find Near City or U.S. Zip Code">
+                    <button id="searchBtn" class="col-lg-1 btn btn-outline-primary btn-lg shadow-sm submit">
+                        <i class="fab fa-searchengin fa-2x rounded"></i>
+                    </button>
+                </select>
+            </div>
+            <!--End of Zomato Search Bar-->
+
+            <!--Div that holds our search results-->
+            <div class="searchresults row" style="width:100%;margin:auto;justify-content: center;">
+            </div>
+            <div class="nextbutton row"></div>
+            <!--Div that holds our map-->
+            <br>
+            <br>
+            <br>
+            <div class="gmapresults">
+                <div id="map"></div>
+            </div>
+            <!--Button that will let user scroll to top-->
+            <button onclick="topFunction()" style="visibility:hidden;" id="myBtn" title="Go to top">Top</button>
+        </div>
+        <!-- End Container -->
+
+</body>
+
+</html>
